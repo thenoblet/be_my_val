@@ -63,7 +63,7 @@ function askValentine() {
         message.style.fontSize = '1.5em';
         message.style.marginTop = '20px';
         message.style.textAlign = 'center';
-        //message.textContent = "You've made my day! 💖";
+        message.textContent = "You've made my day! 💖";
 
         const cardContent = document.querySelector('.card-content');
         cardContent.appendChild(message);
@@ -84,5 +84,5 @@ function askValentine() {
             // Fallback redirect method
             window.location.replace('./countdown.html');
         }
-    }, 1000);
+    }, 1500);
 }
