@@ -9,7 +9,6 @@ function toggleTheme() {
     }
 }
 
-// Randomly select the initial theme
 function setRandomInitialTheme() {
     const themes = ['theme1', 'theme2'];
     const randomTheme = themes[Math.floor(Math.random() * themes.length)];
@@ -20,7 +19,6 @@ setRandomInitialTheme();
 
 setInterval(toggleTheme, 2 * 60 * 1000);
 
-// Existing countdown and animation logic
 const giftArrivalDate = new Date('2025-02-14T14:00:00Z').getTime();
 
 function createFallingHeart() {

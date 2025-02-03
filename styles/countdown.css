@@ -203,7 +203,6 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ... (keep your existing CSS) ... */
 
 .falling-heart {
     position: fixed;
@@ -240,7 +239,7 @@
     }
 }
 
-/* Adjust heart sizes for different screen sizes */
+/* Adjusting heart sizes for different screen sizes */
 @media (max-width: 768px) {
     .falling-heart {
         font-size: 20px;

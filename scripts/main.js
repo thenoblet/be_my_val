@@ -1,5 +1,3 @@
-
-
 function createConfetti() {
     const colors = ['#ff6b6b', '#ff8585', '#ffd3d3', '#ffffff'];
     
@@ -47,15 +45,12 @@ function createConfetti() {
 }
 
 function askValentine() {
-    // Trigger button animation
     const button = document.querySelector('.cta-button');
     button.disabled = true;
     button.classList.add('animate__animated', 'animate__bounceOut');
 
-    // Create confetti effect
     createConfetti();
 
-    // Show success message with animation
     setTimeout(() => {
         const message = document.createElement('div');
         message.classList.add('animate__animated', 'animate__fadeInUp');
@@ -68,7 +63,6 @@ function askValentine() {
         const cardContent = document.querySelector('.card-content');
         cardContent.appendChild(message);
 
-        // Reset button after animation
         setTimeout(() => {
             button.classList.remove('animate__bounceOut');
             button.classList.add('animate__bounceIn');
@@ -78,10 +72,9 @@ function askValentine() {
 	setTimeout(() => {
         console.log('Attempting to redirect...');
         try {
-            window.location.href = './countdown.html';  // Added ./ to ensure relative path
+            window.location.href = './countdown.html';
         } catch (error) {
             console.error('Redirect failed:', error);
-            // Fallback redirect method
             window.location.replace('./countdown.html');
         }
     }, 1500);
