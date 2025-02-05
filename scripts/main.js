@@ -1,3 +1,7 @@
+/**
+ * Creates confetti animation by generating multiple confetti elements
+ * with random colors, positions, and animations.
+ */
 function createConfetti() {
     const colors = ['#ff6b6b', '#ff8585', '#ffd3d3', '#ffffff'];
     
@@ -21,29 +25,13 @@ function createConfetti() {
     }
 }
 
-function createConfetti() {
-    const colors = ['#ff6b6b', '#ff8585', '#ffd3d3', '#ffffff'];
-
-    for (let i = 0; i < 150; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.backgroundColor = color;
-
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        confetti.style.opacity = Math.random();
-        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-            confetti.remove();
-        }, 5000);
-    }
-}
-
+/**
+ * Handles the event when the "Ask Valentine" button is clicked.
+ * - Disables the button and applies animation.
+ * - Creates confetti effect.
+ * - Displays a message after a delay.
+ * - Redirects to the countdown page.
+ */
 function askValentine() {
     const button = document.querySelector('.cta-button');
     button.disabled = true;
@@ -69,7 +57,7 @@ function askValentine() {
         }, 1000);
     }, 1000);
 
-	setTimeout(() => {
+    setTimeout(() => {
         console.log('Attempting to redirect...');
         try {
             window.location.href = './countdown.html';
