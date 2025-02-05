@@ -177,7 +177,24 @@
     box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
 }
 
+#playButton {
+    display: none; /* Hidden by default */
+    background: linear-gradient(45deg, #ff6b6b, #ff8585);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
 
+#playButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+}
 
 .confetti {
   position: fixed;

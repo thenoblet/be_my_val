@@ -19,6 +19,21 @@ setRandomInitialTheme();
 
 setInterval(toggleTheme, 2 * 60 * 1000);
 
+window.onload = function() {
+    const audio = document.getElementById('valentineSong');
+    const playButton = document.getElementById('playButton');
+
+    audio.play().catch(error => {
+        console.log("Click on Play Sugar Plum");
+        playButton.style.display = 'block'; // Show the play button if autoplay is blocked
+    });
+
+    playButton.addEventListener('click', () => {
+        audio.play();
+        playButton.style.display = 'none'; // Hide the button after playing
+    });
+};
+
 const giftArrivalDate = new Date('2025-02-14T14:00:00Z').getTime();
 
 function createFallingHeart() {
